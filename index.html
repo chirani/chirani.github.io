@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Developer Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+    ></script>
+    <style>
+      /* Custom font to enhance the playful but clean Duolingo vibe */
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap");
+      body {
+        font-family: "Nunito", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-zinc-950 text-zinc-200 min-h-screen selection:bg-zinc-700 selection:text-white"
+  >
+    <!-- Section 1: Decorative Header with Alpine.js interaction -->
+    <header
+      class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b-2 border-zinc-800 p-4"
+    >
+      <div
+        class="max-w-4xl mx-auto flex justify-between items-center"
+        x-data="{ streak: 1095, clicked: false }"
+      >
+        <div class="flex items-center gap-3">
+          <!-- Playful Logo mark -->
+          <div
+            class="w-10 h-10 bg-zinc-800 border-2 border-zinc-700 rounded-xl flex items-center justify-center font-black text-xl text-zinc-300 shadow-sm"
+          >
+            Dev
+          </div>
+        </div>
+
+        <!-- Decorative Gamified Header Stats -->
+        <div class="flex gap-4 font-bold text-sm">
+          <!-- Streak Counter -->
+          <button
+            @click="streak++; clicked = true"
+            class="flex items-center gap-2 px-3 py-1.5 bg-zinc-900 border-2 border-zinc-800 border-b-4 rounded-xl text-orange-400 hover:bg-zinc-800 transition-all active:border-b-2 active:translate-y-[2px]"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.559-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span x-text="streak"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+      <!-- Section 2: Hero Section -->
+      <section class="text-center mb-20 space-y-6">
+        <!-- Avatar with Duolingo-style thick border -->
+        <div class="relative inline-block">
+          <img
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=27272a"
+            alt="Profile Picture"
+            class="w-32 h-32 mx-auto rounded-full border-[6px] border-zinc-800 object-cover shadow-lg"
+          />
+          <!-- Status indicator -->
+          <div
+            class="absolute bottom-0 right-2 w-8 h-8 bg-zinc-950 rounded-full border-[3px] border-zinc-800 flex items-center justify-center text-xl"
+          >
+            💻
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <h1
+            class="text-4xl md:text-5xl font-black tracking-tight text-zinc-100"
+          >
+            Software Developer
+          </h1>
+          <p class="text-xl text-zinc-400 font-bold">JavaScript & TypeScript</p>
+        </div>
+
+        <p
+          class="max-w-lg mx-auto text-lg text-zinc-500 font-medium leading-relaxed"
+        >
+          I have three years of experience building full-stack applications. I
+          enjoy crafting robust architectures, experimenting with
+          containerization, and building platforms that help people learn.
+        </p>
+      </section>
+
+      <!-- Section: Skills & Arsenal -->
+      <section class="mb-20">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-black text-zinc-200">Tech Arsenal</h2>
+          <span
+            class="text-sm font-bold text-zinc-500 uppercase tracking-widest"
+            >Level 3</span
+          >
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Skill Badge: TypeScript -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              <span class="text-zinc-300 font-black text-lg">TS</span>
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3">TypeScript</span>
+            <!-- Mastery Bar -->
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: React & Native -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              ⚛️
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3"
+              >React Ecosystem</span
+            >
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 85%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: Docker & VPS -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              🐳
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3"
+              >Docker & VPS</span
+            >
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: Backend (PHP/Hono) -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              🐘
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3">PHP & Hono</span>
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 75%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: Databases (LibSQL) -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              🗄️
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3"
+              >LibSQL & ORM</span
+            >
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 85%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: AI Integrations -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              🦙
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3">Ollama API</span>
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 70%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill Badge: Document Layout -->
+          <div
+            class="flex flex-col items-center p-5 bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl transition-all hover:bg-zinc-800 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-900 border-2 border-zinc-700 rounded-full flex items-center justify-center text-2xl shadow-inner"
+            >
+              📄
+            </div>
+            <span class="font-bold text-zinc-200 text-sm mb-3"
+              >LaTeX Layouts</span
+            >
+            <div
+              class="w-full h-2.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-700"
+            >
+              <div
+                class="h-full bg-zinc-300 rounded-full"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Empty State / Future Skill -->
+          <div
+            class="flex flex-col items-center justify-center p-5 bg-zinc-900/50 border-2 border-dashed border-zinc-700 rounded-2xl"
+          >
+            <div
+              class="w-14 h-14 mb-3 bg-zinc-950 rounded-full flex items-center justify-center text-zinc-600 text-2xl"
+            >
+              🔒
+            </div>
+            <span class="font-bold text-zinc-500 text-sm">Next Skill...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Portfolio Cards -->
+      <section>
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-black text-zinc-200">Recent Quests</h2>
+          <span
+            class="text-sm font-bold text-zinc-500 uppercase tracking-widest"
+            >3 Completed</span
+          >
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project Card 1 -->
+          <a
+            href="#"
+            class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform"
+            >
+              🦉
+            </div>
+            <h3 class="text-xl font-bold text-zinc-100 mb-2">
+              Language Platform
+            </h3>
+            <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
+              A gamified learning web app designed to track progress from A1 to
+              B2 with an intuitive interactive UI.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >TypeScript</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >React</span
+              >
+            </div>
+          </a>
+
+          <!-- Project Card 2 -->
+          <a
+            href="#"
+            class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform"
+            >
+              🐳
+            </div>
+            <h3 class="text-xl font-bold text-zinc-100 mb-2">
+              VPS Architecture
+            </h3>
+            <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
+              Full-stack environment deployment utilizing Node, Vite, and
+              containerization for a seamless production build.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >Docker</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >Ubuntu</span
+              >
+            </div>
+          </a>
+
+          <!-- Project Card 3 -->
+          <a
+            href="#"
+            class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform"
+            >
+              📚
+            </div>
+            <h3 class="text-xl font-bold text-zinc-100 mb-2">
+              Dictionary Engine
+            </h3>
+            <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
+              A structurally precise two-column dictionary mapping tool
+              optimized with an embedded local database.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >LibSQL</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >LaTeX</span
+              >
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
