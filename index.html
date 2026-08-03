@@ -14,30 +14,52 @@
     <style>
       /* Custom font to enhance the playful but clean Duolingo vibe */
       @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap");
+
       body {
         font-family: "Nunito", sans-serif;
       }
     </style>
   </head>
+
   <body
     class="bg-zinc-950 text-zinc-200 min-h-screen selection:bg-zinc-700 selection:text-white"
   >
     <!-- Section 1: Decorative Header with Alpine.js interaction -->
     <header
-      class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b-2 border-zinc-800 p-4"
+      class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b-2 border-zinc-800 p-3"
     >
       <div
-        class="max-w-4xl mx-auto flex justify-between items-center"
+        class="max-w-4xl mx-auto flex gap-3 items-center"
         x-data="{ streak: 1095, clicked: false }"
       >
         <div class="flex items-center gap-3">
           <!-- Playful Logo mark -->
           <div
-            class="w-10 h-10 bg-zinc-800 border-2 border-zinc-700 rounded-xl flex items-center justify-center font-black text-xl text-zinc-300 shadow-sm"
+            class="p-3 py-2 bg-zinc-800 border-2 border-zinc-700 rounded-xl flex items-center justify-center font-black text-lg text-zinc-300 shadow-sm"
           >
-            Dev
+            B_CHIRANI
           </div>
         </div>
+
+        <a
+          href="https://linkedin.com/in/bchirani"
+          target="_blank"
+          class="flex items-center gap-3 ml-auto"
+        >
+          <!-- Playful Logo mark -->
+          <div
+            class="p-3 py-2 bg-zinc-800 border-2 border-zinc-700 rounded-xl flex items-center justify-center font-black text-lg text-zinc-300 shadow-sm"
+          >
+            <svg
+              class="w-6 h-6 fill-current text-zinc-300 group-hover:text-zinc-100 transition-colors"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+          </div>
+        </a>
 
         <!-- Decorative Gamified Header Stats -->
         <div class="flex gap-4 font-bold text-sm">
@@ -65,7 +87,7 @@
         <!-- Avatar with Duolingo-style thick border -->
         <div class="relative inline-block">
           <img
-            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=27272a"
+            src="https://www.github.com/chirani.png"
             alt="Profile Picture"
             class="w-32 h-32 mx-auto rounded-full border-[6px] border-zinc-800 object-cover shadow-lg"
           />
@@ -91,7 +113,7 @@
         >
           I have three years of experience building full-stack applications. I
           enjoy crafting robust architectures, experimenting with
-          containerization, and building platforms that help people learn.
+          containerization, and building new things using new tools
         </p>
       </section>
 
@@ -279,10 +301,13 @@
           >
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
+        >
           <!-- Project Card 1 -->
           <a
-            href="#"
+            href="https://github.com/chirani/reddit-clone-tanstack-start"
+            target="_blank"
             class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
           >
             <div
@@ -290,12 +315,9 @@
             >
               🦉
             </div>
-            <h3 class="text-xl font-bold text-zinc-100 mb-2">
-              Language Platform
-            </h3>
+            <h3 class="text-xl font-bold text-zinc-100 mb-2">Reddit Clone</h3>
             <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
-              A gamified learning web app designed to track progress from A1 to
-              B2 with an intuitive interactive UI.
+              A Functional Fully Featured Multi-Forum Web Application
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span
@@ -306,34 +328,60 @@
                 class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
                 >React</span
               >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >TailwindCss</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >Drizzle-ORM</span
+              >
+
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >SQL</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >...</span
+              >
             </div>
           </a>
 
           <!-- Project Card 2 -->
           <a
-            href="#"
+            href="https://github.com/chirani/graphql-php-server-2"
+            target="_blank"
             class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
           >
             <div
               class="w-12 h-12 rounded-xl bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform"
             >
-              🐳
+              ⛓️
             </div>
             <h3 class="text-xl font-bold text-zinc-100 mb-2">
-              VPS Architecture
+              GraphQl Ecommerce Website
             </h3>
             <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
-              Full-stack environment deployment utilizing Node, Vite, and
-              containerization for a seamless production build.
+              Full-stack Website GraphQl With PHP Backend and TypeScript
+              Frontend
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span
                 class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
-                >Docker</span
+                >PHP</span
               >
               <span
                 class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
-                >Ubuntu</span
+                >GraphQl</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >SQL</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >Docker</span
               >
             </div>
           </a>
@@ -341,6 +389,7 @@
           <!-- Project Card 3 -->
           <a
             href="#"
+            target="_blank"
             class="group block bg-zinc-800/50 border-2 border-zinc-700 border-b-[6px] rounded-2xl p-6 transition-all hover:bg-zinc-800 active:border-b-2 active:translate-y-[4px]"
           >
             <div
@@ -349,20 +398,23 @@
               📚
             </div>
             <h3 class="text-xl font-bold text-zinc-100 mb-2">
-              Dictionary Engine
+              Dictionary Generator
             </h3>
             <p class="text-zinc-400 font-medium text-sm mb-6 line-clamp-2">
-              A structurally precise two-column dictionary mapping tool
-              optimized with an embedded local database.
+              A Series of Scripts to Generate A German Dictionary Through Gemini
             </p>
             <div class="flex flex-wrap gap-2 mt-auto">
               <span
                 class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
-                >LibSQL</span
+                >llm</span
               >
               <span
                 class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
-                >LaTeX</span
+                >Node</span
+              >
+              <span
+                class="px-2.5 py-1 text-xs font-bold bg-zinc-900 text-zinc-300 rounded-lg border border-zinc-700"
+                >JSON & CSV</span
               >
             </div>
           </a>
