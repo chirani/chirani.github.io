@@ -34,6 +34,7 @@ _from September 2018 - December 2020_
 ### Bachelors Degree In Electronic Engineering - Abou Bekr Belkaid
 
 _from September 2015 - July 2018_
+
 **Relevant Courses:** Python, Algorithms, Calculus, Digital and Analog Electronics
 
 ## Skills
